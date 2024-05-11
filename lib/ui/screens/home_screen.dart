@@ -1,3 +1,4 @@
+import 'package:catbreets/ui/screens/widgets/custom_appbar.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -5,9 +6,13 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+    return Scaffold(
+        appBar: const CustomAppBar(height: 100),
+        body: Container(
+          color: Colors.red,
+          child: const Center(
+            child: Text('Hello World!'),
+          ),
         ),
       );
   }
