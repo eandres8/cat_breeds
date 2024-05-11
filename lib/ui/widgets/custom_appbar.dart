@@ -29,6 +29,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     filled: true,
                     border: InputBorder.none,
                     suffixIcon: Icon(Icons.search),
+                    fillColor: Colors.black12,
                   ),
                 ),
               ],
