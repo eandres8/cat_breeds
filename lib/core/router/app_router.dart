@@ -15,10 +15,12 @@ final GoRouter appRouter = GoRouter(
       },
       routes: <RouteBase>[
         GoRoute(
-          path: 'details',
+          path: 'details/:id',
           name: DetailsScreen.name,
           builder: (BuildContext context, GoRouterState state) {
-            return const DetailsScreen(title: 'details cat 418',);
+            final id = state.pathParameters['id'] ?? 'no-id';
+
+            return DetailsScreen(id: id);
           },
         ),
       ],

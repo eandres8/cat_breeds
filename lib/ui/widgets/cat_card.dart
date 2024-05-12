@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import 'package:catbreets/core/constants/not_found.dart';
 import 'package:catbreets/domain/entities/cat.dart';
 
 class CatCard extends StatelessWidget {
@@ -29,7 +30,7 @@ class CatCard extends StatelessWidget {
                   child: Image.network(
                     cat.image,
                     fit: BoxFit.contain,
-                    errorBuilder: (_, __, ___) => Image.network('https://http.cat/images/404.jpg'),
+                    errorBuilder: (_, __, ___) => Image.network(IMG_NO_FOUND),
                   ),
                 ),
       
@@ -38,18 +39,22 @@ class CatCard extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+                      //* Card Header
                       Container(
                         color: Colors.white,
                         child: ListTile(
                           title: Text(cat.name),
-                          trailing: GestureDetector(
-                            onTap: () {
+                          contentPadding: const EdgeInsets.only(left: 20, right: 10),
+                          trailing: IconButton(
+                            onPressed: () {
                               context.push('/details/${cat.id}');
                             },
-                            child: const Text('Más...')
+                            icon: const Icon(Icons.arrow_forward_ios),
                           ),
                         ),
                       ),
+
+                      //* Card Footer
                       Container(
                         color: Colors.white,
                         child: ListTile(

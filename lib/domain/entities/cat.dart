@@ -8,6 +8,7 @@ class Cat {
   final String id;
   final String image;
   final String name;
+  final String lifespan;
 
   Cat({
     required this.affection,
@@ -19,5 +20,6 @@ class Cat {
     required this.intelligence,
     required this.name,
     required this.personality,
+    required this.lifespan,
   });
 }

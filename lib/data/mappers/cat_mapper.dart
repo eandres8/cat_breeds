@@ -13,6 +13,7 @@ class CatMapper {
       id: cr.id,
       image: 'https://cdn2.thecatapi.com/images/${cr.referenceImageId}.jpg',
       name: cr.name,
+      lifespan: cr.lifeSpan,
     )).toList();
   }
 }
