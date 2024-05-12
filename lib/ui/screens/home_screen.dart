@@ -4,7 +4,6 @@ import 'package:catbreets/domain/models/cat_model.dart';
 import 'package:catbreets/ui/widgets/cat_card.dart';
 import 'package:catbreets/ui/widgets/custom_appbar.dart';
 
-
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:catbreets/ui/screens/home_screen.dart';
+// import 'package:catbreets/ui/screens/home_screen.dart';
+import 'package:catbreets/ui/screens/details_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -14,7 +15,7 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       title: 'CatBreeds',
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: DetailsScreen(title: 'name cat'),
     );
   }
 }
