@@ -1,5 +1,20 @@
-
 class CatResponse {
+  final List<CatData> catdata;
+
+  CatResponse({
+      required this.catdata,
+  });
+
+  factory CatResponse.fromJson(List<Map<String, dynamic>> json) => CatResponse(
+      catdata: List<CatData>.from(json.map((x) => CatData.fromJson(x))),
+  );
+
+  Map<String, dynamic> toJson() => {
+    "catdata": List<dynamic>.from(catdata.map((x) => x.toJson())),
+  };
+}
+
+class CatData {
     final Weight weight;
     final String id;
     final String name;
@@ -40,7 +55,7 @@ class CatResponse {
     final int? catFriendly;
     final int? bidability;
 
-    CatResponse({
+    CatData({
         required this.weight,
         required this.id,
         required this.name,
@@ -82,7 +97,7 @@ class CatResponse {
         this.bidability,
     });
 
-    factory CatResponse.fromJson(Map<String, dynamic> json) => CatResponse(
+    factory CatData.fromJson(Map<String, dynamic> json) => CatData(
         weight: Weight.fromJson(json["weight"]),
         id: json["id"],
         name: json["name"],
