@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import 'package:catbreets/domain/models/cat_model.dart';
 
@@ -38,7 +39,12 @@ class CatCard extends StatelessWidget {
                       color: Colors.white,
                       child: ListTile(
                         title: Text(cat.name),
-                        trailing: const Text('Más...'),
+                        trailing: GestureDetector(
+                          onTap: () {
+                            context.push('/details');
+                          },
+                          child: const Text('Más...')
+                        ),
                       ),
                     ),
                     Container(

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:catbreets/domain/models/cat_model.dart';
 
 class DetailsScreen extends StatelessWidget {
+  static String name = 'details-screen';
   final String title;
 
   const DetailsScreen({

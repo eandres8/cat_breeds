@@ -5,6 +5,8 @@ import 'package:catbreets/ui/widgets/cat_card.dart';
 import 'package:catbreets/ui/widgets/custom_appbar.dart';
 
 class HomeScreen extends StatelessWidget {
+  static String name = 'home-screen';
+
   const HomeScreen({super.key});
 
   @override
