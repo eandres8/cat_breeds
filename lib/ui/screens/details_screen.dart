@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:catbreets/domain/models/cat_model.dart';
+import 'package:catbreets/domain/entities/cat.dart';
 
 class DetailsScreen extends StatelessWidget {
   static String name = 'details-screen';
@@ -19,6 +19,10 @@ class DetailsScreen extends StatelessWidget {
       image: 'https://http.cat/images/418.jpg',
       intelligence: 10,
       name: 'Cat 418',
+      affection: 1,
+      description: 'Mollit nulla amet magna voluptate irure nisi duis duis qui non sunt irure. Veniam reprehenderit nisi fugiat tempor adipisicing aliqua elit ea occaecat. Veniam deserunt eu elit adipisicing. Amet mollit incididunt ad tempor pariatur adipisicing cillum reprehenderit. Ipsum non commodo dolor cupidatat elit et mollit proident et nostrud id adipisicing. Deserunt exercitation amet est duis duis sunt.',
+      energy: 1,
+      personality: [],
     );
     
     return _CatDetails(cat: cat);

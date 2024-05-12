@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import 'package:catbreets/domain/models/cat_model.dart';
+import 'package:catbreets/domain/entities/cat.dart';
 
 class CatCard extends StatelessWidget {
   final Cat cat;
