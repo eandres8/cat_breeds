@@ -8,7 +8,11 @@ class CatBreedsRepository extends CatRepository {
   CatBreedsRepository(this.datasource);
 
   @override
-  Future<List<Cat>> requestCatList() {
-    return datasource.requestCatList();
+  Future<List<Cat>> requestCatList() async {
+    try {
+      return datasource.requestCatList();
+    } catch(e) {
+      return List<Cat>.from([]);
+    }
   }
 }

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'package:catbreets/core/router/app_router.dart';
+import 'package:catbreets/ui/blocs/blocs.dart';
 
-void main() {
-  runApp(const MainApp());
+Future<void> main() async {
+  await dotenv.load(fileName: ".env");
+  runApp(const BlocsProviders());
 }
 
 class BlocsProviders extends StatelessWidget {
@@ -13,7 +16,9 @@ class BlocsProviders extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: const [],
+      providers: [
+        BlocProvider<CatListCubit>(create: (_) => CatListCubit()..requestCatList()),
+      ],
       child: const MainApp(),
     );
   }

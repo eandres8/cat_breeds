@@ -5,7 +5,7 @@ class CatResponse {
       required this.catdata,
   });
 
-  factory CatResponse.fromJson(List<Map<String, dynamic>> json) => CatResponse(
+  factory CatResponse.fromJson(List<dynamic> json) => CatResponse(
       catdata: List<CatData>.from(json.map((x) => CatData.fromJson(x))),
   );
 

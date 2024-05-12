@@ -11,7 +11,7 @@ class CatMapper {
       country: cr.origin,
       description: cr.description,
       id: cr.id,
-      image: cr.referenceImageId ?? '',
+      image: 'https://cdn2.thecatapi.com/images/${cr.referenceImageId}.jpg',
       name: cr.name,
     )).toList();
   }

@@ -17,7 +17,7 @@ class CatBreedsDatasource extends CatDatasource {
   Future<List<Cat>> requestCatList() async {
     final response = await dio.get('/breeds');
 
-    final catResponseList = CatResponse.fromJson(response.data);
+    final catResponseList = CatResponse.fromJson(response.data!);
     final catList = CatMapper.catResponseToEntity(catResponseList);
 
     return catList;
