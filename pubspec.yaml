@@ -14,6 +14,7 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^8.1.5
   flutter_dotenv: ^5.1.0
+  flutter_native_splash: ^2.4.0
   go_router: ^14.1.0
 
 dev_dependencies:
@@ -25,3 +26,11 @@ flutter:
   uses-material-design: true
   assets:
     - .env
+    - assets/icons/
+
+flutter_native_splash:
+  color: "#2196F3"
+  branding: assets/icons/cat-5.png
+  branding_android: assets/icons/cat-5.png
+  branding_ios: assets/icons/cat-5.png
+  branding_mode: bottom

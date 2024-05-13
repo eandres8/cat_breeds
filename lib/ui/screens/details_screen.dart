@@ -129,7 +129,7 @@ class _CatPersonality extends StatelessWidget {
                   child: Container(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 15, vertical: 5),
-                    color: Colors.blue,
+                    color: const Color(0xFF2196F3),
                     child: Text(
                       pi,
                       style: const TextStyle(
