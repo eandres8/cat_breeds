@@ -23,4 +23,8 @@ class CatListCubit extends Cubit<CatListState> {
 
     emit(CatListSetted(catList: catList, isLoading: false));
   }
+
+  void filterCatByName(String name) {
+    emit(CatListFiltered(name: name, catList: state.catList));
+  }
 }

@@ -1,3 +1,4 @@
+import 'package:catbreets/data/helpers/filter_cat_by_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -14,14 +15,16 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(height: 100),
+      appBar: CustomAppBar(height: 100),
       body: BlocBuilder<CatListCubit, CatListState>(
-        builder: (_, snapshot) {
+        builder: (context, snapshot) {
           if (snapshot.isLoading) {
             return const Center(child: CircularProgressIndicator(strokeWidth: 2)); 
           }
 
-          return _HomeCatList(snapshot.catList);
+          final catListFiltered = filterCatByName(snapshot.name, snapshot.catList);
+
+          return _HomeCatList(catListFiltered);
         }
       ),
     );
